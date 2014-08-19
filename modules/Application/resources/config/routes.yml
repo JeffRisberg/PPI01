@@ -1,0 +1,11 @@
+Aboutpage:
+    pattern:  /about
+    defaults: { _controller: "Application:Index:about"}
+
+Homepage:
+    pattern:  /
+    defaults: { _controller: "Application:Index:index"}
+
+Homepage_Flashes:
+    pattern:  /flashes
+    defaults: { _controller: "Application:Index:indexWithFlashes"}
