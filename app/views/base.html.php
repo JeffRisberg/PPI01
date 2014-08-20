@@ -12,7 +12,7 @@
     <title><?php $view['slots']->output('title', 'PPI01 Application') ?></title>
     
     <!-- CSS Stuff -->
-    <link href="<?=$view['assets']->getUrl('css/libs/bootstrap.min.css');?>" rel="stylesheet">
+    <link href="<?=$view['assets']->getUrl('css/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?=$view['assets']->getUrl('css/main.css');?>" rel="stylesheet">
     <?php $view['slots']->output('include_css'); ?>
     <!-- /CSS Stuff -->
@@ -30,18 +30,28 @@
 
 <body>
     <header>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="<?=$view['router']->generate('Homepage');?>">PPI01 Application</a>
-                    <ul class="nav">
-                        <li class="active"><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
-                        <li><a href="about">About</a></li>
-                    </ul>
-
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle"
+                          data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="<?=$view['router']->generate('Homepage');?>">Sample Application</a>
                 </div>
-            </div>
-        </div>
+
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="<?=$view['router']->generate('Homepage');?>">Home</a></li>
+                    <li><a href="<?=$view['router']->generate('Aboutpage');?>">About</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
     </header>
 
     <div class="container" id="page-content">
